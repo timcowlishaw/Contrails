@@ -1,6 +1,9 @@
 Contrails - declarative concurrency for EventMachine
 ====================================================
 
+
+![Contrails](http://github.com/likely/contrails/raw/master/contrib/contrails.jpg)
+
 Contrails is a lightweight DSL that allows concurrent processes to be specified using an intuitive, declarative syntax for execution by EventMachine. It consists of a process class that wraps a block, and can then be chained with other processes in series using the `>>` operator, and composed into a single process that executes its constituent processes in parallel using the `*` operator. A trivial example:
 
     Contrails::Process.new { get_an_integer_from_somewhere } >> Contrails.Process.new {|x| x*2 } * {Contrails::Process.new {|x| x * 3}  >> Contrails::Process.new {|x,y| x+y } 
@@ -23,6 +26,4 @@ There's still rather a lot of unsightly syntax there, right? Perhaps even more s
 
 Enjoy! Questions, comments, feature requests and patches always welcome.
 
-![Contrails](http://github.com/likely/contrails/raw/master/contrib/contrails.jpg)
-
-(Photo by[FrancoisRoche](http://www.flickr.com/photos/francoisroche/2563417399/ on flickr), Licence: CC BY-SA)
+(Photo by [FrancoisRoche](http://www.flickr.com/photos/francoisroche/2563417399/) on flickr, Licence: CC BY-SA)
