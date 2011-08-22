@@ -1,5 +1,5 @@
 require 'contrails/semaphore'
-autoload "Chainable", 'contrails/chainable'
+require 'contrails/chainable'
 module Contrails
   class Parallel
 

@@ -51,9 +51,13 @@ describe Contrails::Process do
       it "passes the return value of each process to its successors" do
         for_all do
           int= integer
-          proc1 = Contrails::Process.new { |x| x.should == int; x+1}
-          proc2 = Contrails::Process.new { |x| x.should == int+1; x+1}
-          proc3 = Contrails::Process.new { |x| x.should == int+2; x+1}
+          context = mock
+          context.expects(:test).with(int).in_sequence
+          context.expects(:test).with(int+1).in_sequence
+          context.expects(:test).with(int+2).in_sequence
+          proc1 = Contrails::Process.new { |x| context.test(x); x+1}
+          proc2 = Contrails::Process.new { |x| context.test(x); x+1}
+          proc3 = Contrails::Process.new { |x| context.test(x); x+1}
           async_assertion(proc1.bind(proc2).bind(proc3), int) {|x| x.should == int+3}
         end
       end
@@ -100,8 +104,8 @@ describe Contrails::Process do
       it "executes any subsequently distributed processes in parallel" do
         for_all {
           time = float
-          guard time > 0.05
-          guard time < 0.25
+          guard time > 0.1
+          guard time < 0.3
           context = mock
           context.expects(:first).in_sequence
           context.expects(:second).in_sequence

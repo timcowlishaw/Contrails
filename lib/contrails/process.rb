@@ -1,4 +1,4 @@
-autoload "Chainable", "contrails/chainable"
+require 'contrails/chainable'
 module Contrails
   class Process 
     include Chainable
