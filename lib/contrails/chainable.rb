@@ -27,8 +27,8 @@ module Contrails
 
     def call(*a)
       result = run(*a)
-      result = result.is_a?(Array) ? result : [result]
       self.succeed(*result)
+      return result
     end
 
     def to_proc
