@@ -2,18 +2,18 @@
 
 Gem::Specification.new do |s|
   s.name = %q{contrails}
-  s.version = "0.2.2"
+  s.version = "0.2.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Tim Cowlishaw"]
-  s.date = %q{2011-08-22}
+  s.authors = [%q{Tim Cowlishaw}]
+  s.date = %q{2011-08-25}
   s.email = %q{tim@timcowlishaw.co.uk}
-  s.extra_rdoc_files = ["README.markdown"]
-  s.files = ["Gemfile.lock", "Rakefile", "README.markdown", "Gemfile", "spec/utils_spec.rb", "spec/spec_helper.rb", "spec/process_spec.rb", "lib/contrails/process.rb", "lib/contrails/chainable.rb", "lib/contrails/parallel.rb", "lib/contrails/serial.rb", "lib/contrails/utils.rb", "lib/contrails/semaphore.rb", "lib/contrails/helpers.rb", "lib/contrails.rb"]
+  s.extra_rdoc_files = [%q{README.markdown}]
+  s.files = [%q{Gemfile.lock}, %q{Rakefile}, %q{README.markdown}, %q{Gemfile}, %q{spec/utils_spec.rb}, %q{spec/spec_helper.rb}, %q{spec/process_spec.rb}, %q{lib/contrails/process.rb}, %q{lib/contrails/chainable.rb}, %q{lib/contrails/parallel.rb}, %q{lib/contrails/serial.rb}, %q{lib/contrails/utils.rb}, %q{lib/contrails/semaphore.rb}, %q{lib/contrails/helpers.rb}, %q{lib/contrails.rb}]
   s.homepage = %q{http://github.com/likely/contrails}
-  s.rdoc_options = ["--main", "README.markdown"]
-  s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.5.2}
+  s.rdoc_options = [%q{--main}, %q{README.markdown}]
+  s.require_paths = [%q{lib}]
+  s.rubygems_version = %q{1.8.9}
   s.summary = %q{Declarative concurrency for EventMachine}
 
   if s.respond_to? :specification_version then
