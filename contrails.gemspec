@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{contrails}
-  s.version = "0.2.5"
+  s.version = "0.2.6"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = [%q{Tim Cowlishaw}]
-  s.date = %q{2011-08-30}
+  s.date = %q{2011-09-08}
   s.email = %q{tim@timcowlishaw.co.uk}
   s.extra_rdoc_files = [%q{README.markdown}]
   s.files = [%q{Gemfile.lock}, %q{Rakefile}, %q{README.markdown}, %q{Gemfile}, %q{spec/utils_spec.rb}, %q{spec/spec_helper.rb}, %q{spec/process_spec.rb}, %q{lib/contrails/process.rb}, %q{lib/contrails/chainable.rb}, %q{lib/contrails/parallel.rb}, %q{lib/contrails/serial.rb}, %q{lib/contrails/utils.rb}, %q{lib/contrails/semaphore.rb}, %q{lib/contrails/helpers.rb}, %q{lib/contrails.rb}]
